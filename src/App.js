@@ -1,8 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-import Login from './components/Login';
-import Success from './components/Success';
+import Login from './Pages/Login';
+import Success from './Pages/Success';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
     setIsLogin(false)
   }
 
-  
+
   return (
     <div className="App">
       {
