@@ -1,4 +1,8 @@
-
 *{
-  background-color: aqua;
+  margin:0px;
+  padding:0px;
 }
+.card {
+  width: 500px;
+  max-width: 100%;
+  }

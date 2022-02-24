@@ -19,7 +19,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="align-items-center text-center">
       {
         !isLogin ?
           <Login logIn={logIn} />

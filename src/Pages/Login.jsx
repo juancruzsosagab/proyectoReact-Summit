@@ -2,6 +2,7 @@ import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
 import AlertCustom from "../components/AlertCustom";
+import { Container } from "react-bootstrap";
 
 const Login = ({ logIn }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -16,6 +17,7 @@ const Login = ({ logIn }) => {
   };
 
   const handleSubmit = (e) => {
+    //setLoading(true);
     e.preventDefault();
     axios({
       method: "post",
@@ -28,8 +30,10 @@ const Login = ({ logIn }) => {
       .then((data) => {
         const token = data.data.token;
         if (token) {
+          setIsLoading(false);
           logIn();
         } else {
+          setIsLoading(false);
           setAlert({
             variant: "danger",
             text: "Ha ocurrido un error, inténtelo de nuevo",
@@ -46,6 +50,9 @@ const Login = ({ logIn }) => {
     <>
       {!isLoading ? (
         <>
+         <Container className="align-items-center">
+        <div className="card shadow-sm border-0 px-3 rounded-2 mb-3 py-4 mx-auto mt-5 bg-light">
+        <div className="card-header bg-transparent border-0 text-center text-uppercase"><h3>User Login</h3></div>
           <Form onSubmit={handleSubmit}>
             <Form.Group
               className="mb-3"
@@ -55,11 +62,11 @@ const Login = ({ logIn }) => {
               <Form.Label>User</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter email"
+                placeholder="Enter your username"
                 name="username"
               />
               <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
+                We'll never share your information with anyone else.
               </Form.Text>
             </Form.Group>
 
@@ -75,11 +82,16 @@ const Login = ({ logIn }) => {
                 name="password"
               />
             </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
+            <div className="text-center justify-content-center">
+            <Button variant="primary" type="submit" className="text-center" size="sm">
+              Log In
             </Button>
+            </div>
           </Form>
           <AlertCustom variant={alert.variant} text={alert.text} />
+          </div>
+          </Container>
+   
         </>
       ) : (
         <h1>Cargando...</h1>
