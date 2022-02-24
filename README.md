@@ -14,7 +14,7 @@ git clone https://github.com/juancruzsosagab/proyectoReact-Summit.git
 ```
 
 
-### Instalación 🔧
+## Instalación 🔧
 
 En el directorio del proyecto, run:
 
