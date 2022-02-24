@@ -13,7 +13,6 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 git clone https://github.com/juancruzsosagab/proyectoReact-Summit.git
 ```
 
-
 ## Instalación 🔧
 
 En el directorio del proyecto, run:
