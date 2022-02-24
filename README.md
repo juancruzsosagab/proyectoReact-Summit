@@ -35,12 +35,14 @@ En el directorio del proyecto, run:
 
 ### `npm start`
 
-Abre [http://localhost:3000](http://localhost:3000) para ver en el navegador.
+Abre [http://localhost:3000](http://localhost:3000) para ver en el navegador (puede ser 3001, dependiendo de donde se levante la api).
+
+Tener en cuenta que debe estar corriendo el proyecto express para que funcione el logueo. También, tener en cuenta el endpoint al cual apunta el request, ya que debe coincidir con el puerto que levante express por default
 
 
 ## Autor ✒️
 
-* **Juan Cruz Sosa Gabrielli** - *Desarrollo* - [JuanCruz](https://github.com/juancruzsosagab)
+* **Juan Cruz Sosa Gabrielli** - *Desarrollo* - [Juan Cruz](https://github.com/juancruzsosagab)
 
 
 
