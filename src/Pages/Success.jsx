@@ -7,7 +7,7 @@ const Success = ({ logOut }) => {
       <Card.Body>
         <Card.Title>Keep it simple</Card.Title>
         <Card.Text>
-          Hello, as you know, this is my test. I've done this work quickly, i
+          Hello, as you know, this is my test. I
           wanted to keep it simple! I hope you like it.
         </Card.Text>
         <Button variant="primary" onClick={logOut}>
