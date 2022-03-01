@@ -2,18 +2,23 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import Login from './Pages/Login';
-import Success from './Pages/Success';
+import Home from './Pages/Home';
+import UserDetail from './Pages/UserDetail';
+import Navbar from './components/Navbar/Navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 function App() {
 
   const [isLogin, setIsLogin] = useState(false);
 
-  const logIn = () => {
+  const logIn = (token) => {
+    localStorage.setItem("token", token)
     setIsLogin(true)
   }
 
   const logOut = () => {
+    localStorage.removeItem("token")
     setIsLogin(false)
   }
 
@@ -24,7 +29,13 @@ function App() {
         !isLogin ?
           <Login logIn={logIn} />
           :
-          <Success logOut={logOut} />
+          <BrowserRouter>
+          <Navbar logOut={logOut} />
+          <Routes>
+            <Route path="" element={<Home  />} />
+            <Route path="/:id" element={<UserDetail />} />
+          </Routes>
+          </BrowserRouter>
       }
 
     </div>

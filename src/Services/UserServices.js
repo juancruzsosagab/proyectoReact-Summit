@@ -1,4 +1,4 @@
-import instance from "../Config/axios"
+import instance from "../Config/Axios"
 
 const service = "users/";
 export const getUsers = () => {
@@ -8,8 +8,8 @@ export const getUser = (id) => {
     return instance.get(service + id);
 }
 
-export const updateUser = (id) => {
-    return instance.patch(service + id);
+export const updateUser = (id, data) => {
+    return instance.patch(service + id, data);
 }
 
 export const deleteUser = (id) => {

@@ -1,0 +1,43 @@
+.log-out {
+  background-color: #308e36;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+li a {
+  display: block;
+  background-color: #303331;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+  font-family: Arial;
+}
+
+li {
+  float: left;
+}
+
+li a:hover:not(.active) {
+  background-color: black;
+}
+
+ul {
+  list-style-type: none;
+  background-color: #303331;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px 0px 50px 0px;
+}
+
+li:last-child {
+  float: right !important;
+  height: 40px;
+  margin-top: -5px;
+  display: flex;
+  flex-direction: column;
+}
+
+li:last-child {
+  justify-self: flex-end;
+}

@@ -1,6 +1,7 @@
-import instance from "../Config/axios"
+import instance from "../Config/Axios"
 
 const service = "auth";
+
 export const create = (data) => {
     return instance.post(service + "/signup", data)
 }
