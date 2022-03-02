@@ -26,7 +26,7 @@ const UserDetail = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
+    //console.log(user);
     updateUser(id, user)
       .then(() =>
         setAlert({
