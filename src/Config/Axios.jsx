@@ -11,11 +11,9 @@ instance.interceptors.request.use(
     if (token) {
       config.headers["x-access-token"] = token;
     }
-
     return config;
   },
   (error) => {
-    // Do something with request error
     console.log("Error jwt");
     return Promise.reject(error);
   }

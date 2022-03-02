@@ -5,6 +5,7 @@ const styles = {
     marginTop: "10px",
   },
 };
+
 const AlertCustom = ({ variant, text }) => {
   return (
     <Alert variant={variant} style={styles.alert}>

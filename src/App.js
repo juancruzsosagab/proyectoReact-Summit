@@ -1,16 +1,15 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Pages/Login';
 import Home from './Pages/Home';
 import UserDetail from './Pages/UserDetail';
-import Navbar from './components/Navbar/Navbar';
 import SignUp from './Pages/SignUp';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
 
 
 const App = () => {
-
   const [isLogin, setIsLogin] = useState(false);
 
   const logIn = (token) => {
@@ -22,7 +21,6 @@ const App = () => {
     localStorage.removeItem("token")
     setIsLogin(false)
   }
-
 
   return (
     <div className="align-items-center text-center">
@@ -39,7 +37,6 @@ const App = () => {
             </Routes>
           </BrowserRouter>
       }
-
     </div>
   );
 }

@@ -19,14 +19,14 @@ const Home = ({ logOut }) => {
   };
 
   const removeUser = (id) => {
-    removeArray(id);
     deleteUser(id)
-      .then(() =>
+      .then(() => {
+        removeArray(id);
         setAlert({
           variant: "success",
           text: "Usuario eliminado con éxito",
-        })
-      )
+        });
+      })
       .catch((err) =>
         setAlert({
           variant: "danger",
