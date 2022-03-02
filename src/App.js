@@ -5,10 +5,11 @@ import Login from './Pages/Login';
 import Home from './Pages/Home';
 import UserDetail from './Pages/UserDetail';
 import Navbar from './components/Navbar/Navbar';
+import SignUp from './Pages/SignUp';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
-function App() {
+const App = () => {
 
   const [isLogin, setIsLogin] = useState(false);
 
@@ -30,11 +31,12 @@ function App() {
           <Login logIn={logIn} />
           :
           <BrowserRouter>
-          <Navbar logOut={logOut} />
-          <Routes>
-            <Route path="" element={<Home  />} />
-            <Route path="/:id" element={<UserDetail />} />
-          </Routes>
+            <Navbar logOut={logOut} />
+            <Routes>
+              <Route path="" element={<Home />} />
+              <Route path="/:id" element={<UserDetail />} />
+              <Route path="/signup" element={<SignUp />} />
+            </Routes>
           </BrowserRouter>
       }
 

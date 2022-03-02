@@ -1,7 +1,6 @@
-import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
+import { Form, Button, Container } from "react-bootstrap";
 import AlertCustom from "../components/AlertCustom";
-import { Container } from "react-bootstrap";
 import { login } from "../Services/AuthServices";
 
 const Login = ({ logIn }) => {
@@ -41,7 +40,10 @@ const Login = ({ logIn }) => {
         })
         .catch((err) => {
           setIsLoading(false);
-          setAlert({ variant: "danger", text: err.response.data.message });
+          setAlert({
+            variant: "danger",
+            text: err.response.data.message,
+          });
         });
     }
   };

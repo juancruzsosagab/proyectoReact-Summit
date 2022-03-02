@@ -33,9 +33,9 @@ ul {
 li:last-child {
   float: right !important;
   height: 40px;
-  margin-top: -5px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 li:last-child {

@@ -1,9 +1,8 @@
-import { useParams } from "react-router-dom";
-import { getUser, updateUser } from "../Services/UserServices";
 import { useEffect, useState } from "react";
+import { Form, Button, Container } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 import AlertCustom from "../components/AlertCustom";
-import { Form, Button } from "react-bootstrap";
-import { Container } from "react-bootstrap";
+import { getUser, updateUser } from "../Services/UserServices";
 
 const UserDetail = () => {
   const { id } = useParams();
@@ -30,10 +29,16 @@ const UserDetail = () => {
     console.log(user);
     updateUser(id, user)
       .then(() =>
-        setAlert({ variant: "success", text: "Usuario editado con éxito" })
+        setAlert({
+          variant: "success",
+          text: "Usuario editado con éxito",
+        })
       )
       .catch((err) =>
-        setAlert({ variant: "danger", text: err.response.data.message })
+        setAlert({
+          variant: "danger",
+          text: err.response.data.message,
+        })
       );
   };
 
@@ -46,7 +51,7 @@ const UserDetail = () => {
         <Form onSubmit={handleSubmit}>
           <Form.Group
             className="mb-3"
-            controlId="formBasicEmail"
+            controlId="formBasicUserName"
             onChange={handleChange}
           >
             <Form.Label>User</Form.Label>
@@ -60,7 +65,7 @@ const UserDetail = () => {
 
           <Form.Group
             className="mb-3"
-            controlId="formBasicPassword"
+            controlId="formBasicFull_name"
             onChange={handleChange}
           >
             <Form.Label>Full name</Form.Label>
@@ -73,7 +78,7 @@ const UserDetail = () => {
 
           <Form.Group
             className="mb-3"
-            controlId="formBasicPassword"
+            controlId="formBasicEmail"
             onChange={handleChange}
           >
             <Form.Label>Email</Form.Label>

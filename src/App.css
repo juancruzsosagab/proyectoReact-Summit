@@ -1,8 +1,11 @@
-*{
-  margin:0px;
-  padding:0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 .card {
   width: 500px;
   max-width: 100%;
-  }
+}
+.card button {
+  margin: 0px 5px 0px 5px;
+}
